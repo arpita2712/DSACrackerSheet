@@ -1,0 +1,16 @@
+class Reverse
+{
+    public static String reverseWord(String str)
+    {
+       int i,j;
+       char[] charArray = str.toCharArray();
+       for(i=0, j = str.length()-1; i<=j && j>=i; i++,j--){
+           char a = str.charAt(i);
+           charArray[i] = str.charAt(j);
+           charArray[j] = a;
+       }
+       String s = new String(charArray);
+       return s;
+    }
+    
+}
