@@ -1,0 +1,25 @@
+void sort012(int a[], int n)
+{ int i,j;
+   for( i = 0, j = 0 ; i < n && j < n ;){
+        if(a[i]==0){
+            int temp = a[j];
+            a[j] = a[i];
+            a[i] = temp;
+            j++;
+            i++;
+        }
+        else
+            i++;
+   }
+   for( i = j ; i < n && j < n ;){
+        if(a[i]==1){
+            int temp = a[j];
+            a[j] = a[i];
+            a[i] = temp;
+            j++;
+            i++;
+        }
+        else
+            i++;
+   }
+}
